@@ -90,10 +90,11 @@ indexRouter.post('/verifyFingerPrint',cors(), function(req, res) {
   })
 });
 indexRouter.post('/newFingerPrint', cors(),function(req, res) {
-  let sql = `INSERT INTO VLedger(Fingerprint, LastVend, TotalVends) VALUES (?)`;
+  let sql = `INSERT INTO VLedger(Fingerprint, LastVend, MachineNumber, TotalVends) VALUES (?)`;
   let values = [
     req.body.Fingerprint,
     req.body.LastVend,
+    req.body.MachineNumber,
     '0'
     
     
@@ -105,7 +106,7 @@ indexRouter.post('/newFingerPrint', cors(),function(req, res) {
       message: "New fingerprint added successfully"
     })
   })
-  client.publish('vend-machine/vend','1')
+  client.publish('vend-machine/vend',values[2])
 });
 
 //UPDATE Users SET Credits=(CreditsRequest+Credits), CreditsRequest='0' WHERE Email='n@n.com'
@@ -115,12 +116,13 @@ indexRouter.post('/vend',cors(), function(req, res) {
   let values = [
     
     req.body.Fingerprint,
-    req.body.LastVend
+    req.body.LastVend,
+    req.body.MachineNumber
     
     
     
   ];
-  let sql = `UPDATE VLedger SET LastVend='`+values[1]+`' , TotalVends=(TotalVends+1) WHERE Fingerprint='`+values[0]+`'`;
+  let sql = `UPDATE VLedger SET LastVend='`+values[1]+`' MachineNumber='`+values[2]+`' , TotalVends=(TotalVends+1) WHERE Fingerprint='`+values[0]+`'`;
   
   db.query(sql, [values], function(err, data, fields) {
     if (err) throw err;
@@ -129,7 +131,7 @@ indexRouter.post('/vend',cors(), function(req, res) {
       message: "vending initiated"
     })
   })
-  client.publish('vend-machine/vend','1')
+  client.publish('vend-machine/vend',values[2])
 });
 
 indexRouter.post('/credReq',cors(), function(req, res) {

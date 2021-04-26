@@ -58,7 +58,8 @@ Default password: admin
 
 ## WebApp Links <a name = "webapp"></a>
 
-- Client App http://vend-frontend.production.wrapdrive.tech/#/dashboard
+- Client App Machine 1 http://vend-frontend.production.wrapdrive.tech/#/dashboard/1
+- Client App Machine 2 http://vend-frontend.production.wrapdrive.tech/#/dashboard/2
 - Admin Dashboard http://vend-admin.production.wrapdrive.tech/#/
 
 ## Circuit Diagram <a name = "circuit"></a>
@@ -67,9 +68,11 @@ Servo is connected to GPIO3 of Raspberry Pi
 ![circuit diagram](Circuit_bb.png)
 
 ## QRCode <a name = "qr"></a>
-- On scanning,it will lead to http://vend-frontend.production.wrapdrive.tech/#/dashboard
-
-![circuit diagram](qr.png)
+- On scanning,it will lead to Client Machine Links
+    Machine 1
+    ![QR1](qr1.png)
+    Machine 2
+    ![QR1](qr2.png)
 
 ## Demo Videos <a name = "videos"></a>
 

@@ -10,10 +10,11 @@
           <template slot="header">
             <md-icon>update</md-icon>
           </template>
-
+          
           <template slot="content">
             <p class="category">Next Vend Time</p>
             <h4 class="title">{{nextVendAt}}</h4>
+            <h6>Machine Number: {{this.$route.params.id}}</h6>
           </template>
           
 
@@ -166,7 +167,7 @@ export default {
       const requestOptions = {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ Fingerprint: this.Fingerprint, LastVend:this.Timestamp })
+            body: JSON.stringify({ Fingerprint: this.Fingerprint, LastVend:this.Timestamp , MachineNumber:this.$route.params.id})
   };
       fetch(API_URL_NEWFP, requestOptions)
     .then(response => response.json())
@@ -182,7 +183,7 @@ export default {
       const requestOptions = {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ Fingerprint: this.Fingerprint, LastVend:this.Timestamp })
+            body: JSON.stringify({ Fingerprint: this.Fingerprint, LastVend:this.Timestamp, MachineNumber:this.$route.params.id })
   };
       fetch(API_URL_RetVend, requestOptions)
     .then(response => response.json())

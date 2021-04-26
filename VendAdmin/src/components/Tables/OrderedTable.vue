@@ -5,6 +5,7 @@
         <md-table-cell md-label="ID">{{ item.ID }}</md-table-cell>
         <md-table-cell md-label="Fingerprint">{{ item.Fingerprint }}</md-table-cell>
         <md-table-cell md-label="Last Vend">{{ item.LastVend }}</md-table-cell>
+        <md-table-cell md-label="Vend Machine">{{ item.MachineNumber }}</md-table-cell>
         <md-table-cell md-label="Total Vends">{{ item.TotalVends }}</md-table-cell>
         
         
