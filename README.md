@@ -20,32 +20,39 @@ These instructions will get you a copy of the project up and running on you rasp
 
 ### Prerequisites
 
-Turn on your Raspberry Pi, copy Firmware folder to the destkop of your Raspberry Pi and execute the following commands
+Turn on your Raspberry Pi and execute the following commands
 
 ```
 - sudo apt update
 - sudo apt upgrade
-
 ```
 
 ### Installing
 
 Installing the Firmware to your Raspberry Pi
+- Copy FimrwareMachine1 to the Desktop of Raspberry Pi #1
+- Copy FimrwareMachine2 to the Desktop of Raspberry Pi #2
 
-This assumes that you have already copied Firmware folder from this repository to the desktop of your Raspberry Pi
-Open the terminal and execute the following commands
+Open the terminal and execute the following commands for Machine #1
 
 ```
-- cd ~/Desktop/Firmware
+- cd ~/Desktop/FirmwareMachine1
 - python3 mainHandle.py
 ```
 
+for Machine #2
+
+```
+- cd ~/Desktop/FirmwareMachine2
+- python3 mainHandle.py
+```
 
 ## Usage <a name = "usage"></a>
 
 - Run the Raspberry Pi Firmware
-- Scan the QRCode or open this link on your device
-- http://vend-frontend.production.wrapdrive.tech/#/dashboard
+- Scan the QRCode or open this link on your device depneding on the machine number
+- http://vend-frontend.production.wrapdrive.tech/#/dashboard/1
+- http://vend-frontend.production.wrapdrive.tech/#/dashboard/2
 - Click VEND button to vend the product
 
 - For vend reports open the admin panel
