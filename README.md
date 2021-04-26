@@ -5,7 +5,10 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
-- [Contributing](../CONTRIBUTING.md)
+- [WebApp Links](#webapp)
+- [Circuit Diagram](#circuit)
+- [QR Code](#qr)
+- [Demo Videos](#videos)
 
 ## About <a name = "about"></a>
 
@@ -53,16 +56,22 @@ Default email address: admin@admin.com
 Default password: admin
 ```
 
-## WebApp Links
+## WebApp Links <a name = "webapp"></a>
 
 - Client App http://vend-frontend.production.wrapdrive.tech/#/dashboard
 - Admin Dashboard http://vend-admin.production.wrapdrive.tech/#/
 
-## Circuit Diagram
+## Circuit Diagram <a name = "circuit"></a>
 Servo is connected to GPIO3 of Raspberry Pi
 
 ![circuit diagram](Circuit_bb.png)
 
-## QRCode
+## QRCode <a name = "qr"></a>
+- On scanning,it will lead to http://vend-frontend.production.wrapdrive.tech/#/dashboard
 
-![circuit diagram](qrLarge.png)
+![circuit diagram](qr.png)
+
+## Demo Videos <a name = "videos"></a>
+
+- Admin Dashboard with reports: https://youtu.be/Xk8GflYM__A
+- User Flow: 
