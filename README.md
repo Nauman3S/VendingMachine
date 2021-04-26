@@ -69,10 +69,10 @@ Servo is connected to GPIO3 of Raspberry Pi
 
 ## QRCode <a name = "qr"></a>
 - On scanning,it will lead to Client Machine Links
-    Machine 1
-    ![QR1](qr1.png)
-    Machine 2
-    ![QR1](qr2.png)
+- Machine 1
+![QR1](qr1.png)
+- Machine 2
+![QR1](qr2.png)
 
 ## Demo Videos <a name = "videos"></a>
 
