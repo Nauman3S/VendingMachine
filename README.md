@@ -74,4 +74,4 @@ Servo is connected to GPIO3 of Raspberry Pi
 ## Demo Videos <a name = "videos"></a>
 
 - Admin Dashboard with reports: https://youtu.be/Xk8GflYM__A
-- User Flow: 
+- User Flow: https://youtu.be/5QvsIMGCAJA
