@@ -25,6 +25,7 @@ Turn on your Raspberry Pi and execute the following commands
 ```
 - sudo apt update
 - sudo apt upgrade
+- sudo pip3 install paho-mqtt
 ```
 
 ### Installing

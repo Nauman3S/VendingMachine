@@ -15,5 +15,6 @@ def SetAngle(angle):
 	pwm.ChangeDutyCycle(0)
 
 def cleanUp():
+	
     pwm.stop()
     GPIO.cleanup()
