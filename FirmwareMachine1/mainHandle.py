@@ -27,7 +27,7 @@ def on_message(client, userdata, message):
         print(msgV)
         if(msgV=='1'):
             print('vending')
-            vendHandler.SetAngle(90)#rotate servo
+            vendHandler.MotorHandle(True)#rotate servo
             vendIt=1
 
     
@@ -44,7 +44,7 @@ client.loop_start() #start the loop
 client.subscribe("vend-machine/vend")
 
 start = time.time()
-counter=5
+counter=5#turn motor on for 5 seconds
 while 1:
     #print("running")
     time.sleep(0.1)
@@ -55,6 +55,6 @@ while 1:
         if(counter<=0):
             vendIt=0
             counter=5
-            vendHandler.SetAngle(0)#rotate servo
+            vendHandler.MotorHandle(False)#turn off the motor
 
 vendHandler.cleanUp()
