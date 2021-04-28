@@ -43,7 +43,7 @@ node_modules/
 jspm_packages/
 FrontEnd/BackupComputer/node_modules/
 Backend/APIHandle/node_modules/
-
+reqs.txt
 # TypeScript v1 declaration files
 typings/
 
