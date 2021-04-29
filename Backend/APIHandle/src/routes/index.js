@@ -122,7 +122,7 @@ indexRouter.post('/vend',cors(), function(req, res) {
     
     
   ];
-  let sql = `UPDATE VLedger SET LastVend='`+values[1]+`' MachineNumber='`+values[2]+`' , TotalVends=(TotalVends+1) WHERE Fingerprint='`+values[0]+`'`;
+  let sql = `UPDATE VLedger SET LastVend='`+values[1]+`' ,MachineNumber='`+values[2]+`' , TotalVends=(TotalVends+1) WHERE Fingerprint='`+values[0]+`'`;
   
   db.query(sql, [values], function(err, data, fields) {
     if (err) throw err;

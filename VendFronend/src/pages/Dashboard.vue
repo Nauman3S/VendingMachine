@@ -27,6 +27,7 @@
         </stats-card>
         <md-button class="md-primary md-round md-lg btn-just-icon" @click="vend()"><md-icon >precision_manufacturing</md-icon>Vend</md-button>
         
+        
       </div>
 
       
@@ -241,7 +242,8 @@ export default {
         this.nextVendAt=this.get24HDiff(lv)
         console.log('updating fp')
         //this.returningVend();
-        if(this.getNow().getTime()>=this.nextVendAt.getTime){
+        //if(this.getNow().getTime()>=this.nextVendAt.getTime){
+          if(1==1){
         this.returningVend();
         }
 
